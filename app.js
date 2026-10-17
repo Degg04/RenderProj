@@ -26,6 +26,7 @@ if(process.env.FRONTEND_URL){
 app.get("/", (req, res) => {
     res.json({
         mensaje: "Bienvenido a la API, version 2",
+        autor: "Diego Garcia",
         entorno: NODE_ENV
     });
 });
@@ -34,7 +35,7 @@ app.get("/", (req, res) => {
 app.get("/health", (req, res) => {
     res.status(200).json({
         status: "ok",
-        servicio: "API Desarrollo Web",
+        servicio: "API Desarrollo Web - Diego Garcia",
         timestamp: new Date().toISOString()
     });
 });
